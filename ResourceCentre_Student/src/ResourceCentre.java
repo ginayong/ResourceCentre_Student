@@ -176,10 +176,13 @@ public class ResourceCentre {
 		System.out.println("Camcorder added");
 	}
 	
-	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
+	public static Chromebook inputChromebook() {
 		// write your code here
-		System.out.println("Hi");
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter OS > ");
+		
+		Chromebook cb = new Chromebook(tag, description, os);
 		return cb;
 		
 	}	
